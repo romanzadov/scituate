@@ -1,0 +1,128 @@
+<h1>Sign up as a guest</h1>
+
+<% form_for(@guest) do |f| %>
+  <%= f.error_messages %>
+
+  <p>
+    <%= f.label :name %><br />
+    <%= f.text_field :name %>
+  </p>
+  <p>
+    <%= f.label :vegetarian? %><br />
+    <%= f.check_box :veg %>
+  </p>
+
+<br>
+<br><h3> What times do you think you'll be in Scituate? You don't have to be 100% sure, I'm just trying to get a ballpark figure. If you think there's more than a 50% chance, say yes.</h3>
+<br>
+<table bgcolor=#F2EBB7>
+<tr>  
+<td>
+    Wednesday<br>Evening<br />
+    <%= f.check_box :w3 %>
+  </td>
+  <td>
+    Thursday<br>Morning<br />
+    <%= f.check_box :t1 %>
+  </td>
+ <td>
+    Thursday<br>Afternoon<br />
+    <%= f.check_box :t2 %>
+  </td>
+
+ <td>
+    Thursday<br>Evening<br />
+    <%= f.check_box :t3 %>
+  </td>
+ <td>
+    Friday<br>Morning<br />
+    <%= f.check_box :f1 %>
+  </td>
+ <td>
+    Friday<br>Afternoon<br />
+    <%= f.check_box :f2 %>
+  </td>
+
+ <td>
+    Friday<br>Evening<br />
+    <%= f.check_box :f3 %>
+  </td>
+  <td>
+    Saturday<br>Morning<br />
+    <%= f.check_box :s1 %>
+  </td>
+ <td>
+    Saturday<br>Afternoon<br />
+    <%= f.check_box :s2 %>
+  </td>
+
+ <td>
+    Saturday<br>Evening<br />
+    <%= f.check_box :s3 %>
+  </td>
+ <td>
+    Sunday<br>Morning<br />
+    <%= f.check_box :s4 %>
+  </td>
+</tr>
+</table>
+<br>
+<br>
+<h3>To avoid kitchen conflicts, click on when you want to cook. You don't have to cook - you can bring something - or even better just bring yourself. </h2>
+<br>
+
+<table bgcolor=#F2EBB7>
+<tr>
+ <td>
+    Wednesday<br>Evening<br />
+    <%= f.check_box :fw3 %>
+  </td>
+ <td>
+    Thursday<br>Morning<br />
+    <%= f.check_box :ft1 %>
+  </td>
+ <td>
+    Thursday<br>Afternoon<br />
+    <%= f.check_box :ft2 %>
+  </td>
+ <td>
+    Thursday<br>Evening<br />
+    <%= f.check_box :ft3 %>
+  </td>
+ <td>
+    Friday<br>Morning<br />
+    <%= f.check_box :ff1 %>
+  </td>
+ <td>
+    Friday<br>Afternoon<br />
+    <%= f.check_box :ff2 %>
+  </td>
+ <td>
+    Friday<br>Evening<br />
+    <%= f.check_box :ff3 %>
+  </td>
+ <td>
+    Saturday<br>Morning<br />
+    <%= f.check_box :fs1 %>
+  </td>
+ <td>
+    Saturday<br>Afternoon<br />
+    <%= f.check_box :fs2 %>
+  </td>
+ <td>
+    Saturday<br>Evening<br />
+    <%= f.check_box :fs3 %>
+  </td>
+ <td>
+    Sunday<br>Morning<br />
+    <%= f.check_box :fs4 %>
+  </td>
+</table>
+<br>
+  <p>
+    <%= f.submit 'Create' %>
+  </p>
+
+<% end %>
+
+<%= link_to 'Back', guests_path %>

@@ -1,0 +1,280 @@
+<h1>Guest list</h1>
+<br>
+<h2>Summary</h2>
+
+<table bgcolor=#F2EBB7>
+<tr>
+	<th> </th>
+    <th>Wednesday<br>Evening</th>
+    <th>Thursday<br>Morning</th>
+    <th>Thursday<br>Afternoon</th>
+    <th>Thursday<br>Evening</th>
+    <th>Friday<br>Morning</th>
+    <th>Friday<br>Afternoon</th>
+    <th>Friday<br>Evening</th>
+    <th>Saturday<br>Morning</th>
+    <th>Saturday<br>Afternoon</th>
+    <th>Saturday<br>Evening</th>
+    <th>Sunday<br>Morning</th>
+</tr>
+<tr>
+	<th>ATTENDING</th>
+
+	<td><%=@w3%></td>
+	<td><%=@t1%></td>
+	<td><%=@t2%></td>
+	<td><%=@t3%></td>
+	<td><%=@f1%></td>
+	<td><%=@f2%></td>
+	<td><%=@f3%></td>
+	<td><%=@s1%></td>
+	<td><%=@s2%></td>
+	<td><%=@s3%></td>
+	<td><%=@s4%></td>
+</tr>
+<tr>
+	<th>VEG SUBSET</th>
+	<td><%=@vw3%></td>
+	<td><%=@vt1%></td>
+	<td><%=@vt2%></td>
+	<td><%=@vt3%></td>	
+        <td><%=@vf1%></td>
+	<td><%=@vf2%></td>
+	<td><%=@vf3%></td>
+	<td><%=@vs1%></td>
+	<td><%=@vs2%></td>
+	<td><%=@vs3%></td>
+	<td><%=@vs4%></td>
+</tr>
+<tr>
+	<th>PLANNING<br>TO COOK</th>
+	<td><%=@fw3%></td>
+	<td><%=@ft1%></td>
+	<td><%=@ft2%></td>
+	<td><%=@ft3%></td>	
+        <td><%=@ff1%></td>
+	<td><%=@ff2%></td>
+	<td><%=@ff3%></td>
+	<td><%=@fs1%></td>
+	<td><%=@fs2%></td>
+	<td><%=@fs3%></td>
+	<td><%=@fs4%></td>
+</tr>
+</table>
+
+<br>
+<h2>Details</h2>
+<table bgcolor=#F2EBB7 >
+  <tr>
+    
+<tr >   
+<th>ATTENDING</th>
+    <th>Wednesday<br>Evening</th>
+    <th>Thursday<br>Morning</th>
+    <th>Thursday<br>Afternoon</th>
+    <th>Thursday<br>Evening</th>
+    <th>Friday<br>Morning</th>
+    <th>Friday<br>Afternoon</th>
+    <th>Friday<br>Evening</th>
+    <th>Saturday<br>Morning</th>
+    <th>Saturday<br>Afternoon</th>
+    <th>Saturday<br>Evening</th>
+    <th>Sunday<br>Morning</th>
+</tr>
+<% @guests.each do |guest| %>
+	<% if guest.veg == true%>
+	<%@veg = "VEG"%>	
+	<%else%>
+	<%@veg = ""%>
+	<%end%>
+  <tr>
+    <td><%=h guest.name %></td>
+    <% if guest.w3 == true %>
+	<%@color = "#5dd063"%>
+	<%@aveg = @veg%>
+	<%else%>
+	<%@color = "#bdc7bb"%>
+	<%@aveg = " "%>
+	<%end%> 
+    <td bgcolor = <%=@color%>><b><%=@aveg%></b></td>
+<% if guest.t1 == true %>
+	<%@color = "#5dd063"%>
+	<%@aveg = @veg%>
+	<%else%>
+	<%@color = "#bdc7bb"%>
+	<%@aveg = " "%>
+	<%end%> 
+    <td bgcolor = <%=@color%>><b><%=@aveg%></b></td>
+<% if guest.t2== true %>
+	<%@color = "#5dd063"%>
+	<%@aveg = @veg%>
+	<%else%>
+	<%@color = "#bdc7bb"%>
+	<%@aveg = " "%>
+	<%end%> 
+    <td bgcolor = <%=@color%>><b><%=@aveg%></b></td>
+<% if guest.t3 == true %>
+	<%@color = "#5dd063"%>
+	<%@aveg = @veg%>
+	<%else%>
+	<%@color = "#bdc7bb"%>
+	<%@aveg = " "%>
+	<%end%> 
+    <td bgcolor = <%=@color%>><b><%=@aveg%></b></td>
+<% if guest.f1 == true %>
+	<%@color = "#5dd063"%>
+	<%@aveg = @veg%>
+	<%else%>
+	<%@color = "#bdc7bb"%>
+	<%@aveg = " "%>
+	<%end%> 
+    <td bgcolor = <%=@color%>><b><%=@aveg%></b></td>
+<% if guest.f2== true %>
+	<%@color = "#5dd063"%>
+	<%@aveg = @veg%>
+	<%else%>
+	<%@color = "#bdc7bb"%>
+	<%@aveg = " "%>
+	<%end%> 
+    <td bgcolor = <%=@color%>><b><%=@aveg%></b></td>
+<% if guest.f3 == true %>
+	<%@color = "#5dd063"%>
+	<%@aveg = @veg%>
+	<%else%>
+	<%@color = "#bdc7bb"%>
+	<%@aveg = " "%>
+	<%end%> 
+    <td bgcolor = <%=@color%>><b><%=@aveg%></b></td>
+<% if guest.s1 == true %>
+	<%@color = "#5dd063"%>
+	<%@aveg = @veg%>
+	<%else%>
+	<%@color = "#bdc7bb"%>
+	<%@aveg = " "%>
+	<%end%> 
+    <td bgcolor = <%=@color%>><b><%=@aveg%></b></td>
+<% if guest.s2== true %>
+	<%@color = "#5dd063"%>
+	<%@aveg = @veg%>
+	<%else%>
+	<%@color = "#bdc7bb"%>
+	<%@aveg = " "%>
+	<%end%> 
+    <td bgcolor = <%=@color%>><b><%=@aveg%></b></td>
+<% if guest.s3 == true %>
+	<%@color = "5dd063"%>
+	<%@aveg = @veg%>
+	<%else%>
+	<%@color = "#bdc7bb"%>
+	<%@aveg = " "%>
+	<%end%> 
+    <td bgcolor = <%=@color%>><b><%=@aveg%></b></td>
+<% if guest.s4 == true %>
+	<%@color = "5dd063"%>
+	<%@aveg = @veg%>
+	<%else%>
+	<%@color = "#bdc7bb"%>
+	<%@aveg = " "%>
+	<%end%>  
+    <td bgcolor = <%=@color%>><b><%=@aveg%></b></td>
+
+    <td><%= link_to 'Edit', edit_guest_path(guest) %></td>
+</tr>
+<% end %>
+<tr>
+</table>
+<br>
+<table bgcolor=#F2EBB7>
+<th>PLANNING<br>TO COOK</th>
+  <th>Wednesday<br>Evening</th>
+    <th>Thursday<br>Morning</th>
+    <th>Thursday<br>Afternoon</th>
+    <th>Thursday<br>Evening</th>
+    <th>Friday<br>Morning</th>
+    <th>Friday<br>Afternoon</th>
+    <th>Friday<br>Evening</th>
+    <th>Saturday<br>Morning</th>
+    <th>Saturday<br>Afternoon</th>
+    <th>Saturday<br>Evening</th>
+    <th>Sunday<br>Morning</th>
+
+</tr>
+  </tr>
+
+<% @guests.each do |guest| %>
+  <tr>
+   <td><%=h guest.name %></td>
+    <% if guest.fw3 == true %>
+	<%@color = "#5dd063"%>
+	<%else%>
+	<%@color = "#bdc7bb"%>
+	<%end%> 
+     <td bgcolor = <%=@color%>></td>
+  <% if guest.ft1 == true %>
+	<%@color = "#5dd063"%>
+	<%else%>
+	<%@color = "#bdc7bb"%>
+	<%end%> 
+     <td bgcolor = <%=@color%>></td>
+   <% if guest.ft2 == true %>
+	<%@color = "#5dd063"%>
+	<%else%>
+	<%@color = "#bdc7bb"%>
+	<%end%> 
+     <td bgcolor = <%=@color%>></td>
+    <% if guest.ft3 == true %>
+	<%@color = "#5dd063"%>
+	<%else%>
+	<%@color = "#bdc7bb"%>
+	<%end%> 
+     <td bgcolor = <%=@color%>></td>
+  <% if guest.ff1 == true %>
+	<%@color = "#5dd063"%>
+	<%else%>
+	<%@color = "#bdc7bb"%>
+	<%end%> 
+     <td bgcolor = <%=@color%>></td>
+   <% if guest.ff2 == true %>
+	<%@color = "#5dd063"%>
+	<%else%>
+	<%@color = "#bdc7bb"%>
+	<%end%> 
+     <td bgcolor = <%=@color%>></td>
+    <% if guest.ff3 == true %>
+	<%@color = "#5dd063"%>
+	<%else%>
+	<%@color = "#bdc7bb"%>
+	<%end%> 
+     <td bgcolor = <%=@color%>></td> 
+  <% if guest.fs1 == true %>
+	<%@color = "#5dd063"%>
+	<%else%>
+	<%@color = "#bdc7bb"%>
+	<%end%> 
+     <td bgcolor = <%=@color%>></td>
+   <% if guest.fs2 == true %>
+	<%@color = "#5dd063"%>
+	<%else%>
+	<%@color = "#bdc7bb"%>
+	<%end%> 
+     <td bgcolor = <%=@color%>></td>
+    <% if guest.fs3 == true %>
+	<%@color = "#5dd063"%>
+	<%else%>
+	<%@color = "#bdc7bb"%>
+	<%end%> 
+     <td bgcolor = <%=@color%>></td>
+    <% if guest.fs4 == true %>
+	<%@color = "#5dd063"%>
+	<%else%>
+	<%@color = "#bdc7bb"%>
+	<%end%> 
+     <td bgcolor = <%=@color%>></td>
+    <td><%= link_to 'Edit', edit_guest_path(guest) %></td>
+  </tr>
+<% end %>
+</table>
+
+<br />
+
+<%= link_to 'New guest', new_guest_path %>

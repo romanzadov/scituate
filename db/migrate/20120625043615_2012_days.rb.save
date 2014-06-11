@@ -1,0 +1,7 @@
+class 2012Days < ActiveRecord::Migration
+  def self.up
+  end
+	:remove_column
+  def self.down
+  end
+end
